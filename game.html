@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Loading game…</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="play-body">
+  <div class="play-shell">
+    <header class="playbar">
+      <a class="back-button" id="backButton" href="./" aria-label="Back to game list">← Back</a>
+      <div class="play-title">
+        <span class="play-kicker" id="gameType">GAME</span>
+        <h1 id="gameName">Loading…</h1>
+      </div>
+      <a class="open-external" id="externalLink" href="#" target="_blank" rel="noopener noreferrer">Open source ↗</a>
+    </header>
+
+    <section class="game-stage" aria-label="Game frame">
+      <iframe
+        id="gameFrame"
+        title="Embedded game"
+        allow="fullscreen; autoplay; gamepad; pointer-lock"
+        referrerpolicy="no-referrer"
+      ></iframe>
+      <div class="frame-note">
+        <strong id="frameNoteTitle">Game loaded inside this page.</strong>
+        <span>Some sites may block iframe embedding depending on their own browser security rules.</span>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
