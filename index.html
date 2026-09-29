@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="A simple browser game hub with three playable iframe experiences." />
+  <title>Game Dock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">TALLMII // GAME DOCK</div>
+      <h1>Pick a game.<br /><span>Press play.</span></h1>
+      <p class="hero-copy">
+        A clean little launcher for browser-based games and web experiences.
+        Each title opens in its own focused play screen.
+      </p>
+    </header>
+
+    <section class="game-grid" id="gameGrid" aria-label="Games"></section>
+
+    <footer class="footer">
+      <span>Runs as a static GitHub Pages site.</span>
+      <span>↗ External game content is embedded in an iframe.</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
