@@ -3,27 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b1020" />
-  <meta name="description" content="A simple browser game hub with three playable iframe experiences." />
-  <title>Game Dock</title>
+  <meta name="theme-color" content="#291536" />
+  <meta name="description" content="J — a tiny browser game shelf for three playable web experiences." />
+  <title>J — Game Shelf</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="shell">
-    <header class="hero">
-      <div class="eyebrow">TALLMII // GAME DOCK</div>
-      <h1>Pick a game.<br /><span>Press play.</span></h1>
-      <p class="hero-copy">
-        A clean little launcher for browser-based games and web experiences.
-        Each title opens in its own focused play screen.
-      </p>
-    </header>
+  <div class="site-bg" aria-hidden="true"></div>
 
-    <section class="game-grid" id="gameGrid" aria-label="Games"></section>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./" aria-label="J game shelf home">
+        <span class="brand-mark">J</span>
+        <span class="brand-name">PIXEL//J</span>
+      </a>
+
+      <nav class="topnav" aria-label="Primary">
+        <a class="nav-pill active" href="./">Game Shelf</a>
+        <button class="nav-pill" id="randomGame" type="button">Random Game ↗</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="featured-wrap" aria-label="Featured game">
+      <div class="section-kicker">NOW PLAYING</div>
+
+      <div class="player-card">
+        <div class="player-topline">
+          <div class="player-source">
+            <span class="live-dot"></span>
+            <span>EMBEDDED WEB GAME</span>
+          </div>
+          <a class="tiny-link" id="openSource" href="#" target="_blank" rel="noopener noreferrer">Open source ↗</a>
+        </div>
+
+        <div class="frame-box">
+          <iframe id="homeFrame" title="Featured game" allow="fullscreen; autoplay; gamepad; pointer-lock" referrerpolicy="no-referrer"></iframe>
+          <div class="frame-shade"></div>
+          <div class="frame-hint" id="frameHint">
+            <span class="hint-title">Loading the game…</span>
+            <span>Some sites may block iframe embedding. Use “Open source ↗” if that happens.</span>
+          </div>
+        </div>
+
+        <div class="player-footer">
+          <div>
+            <span class="eyebrow" id="featuredType">3D PLATFORMER</span>
+            <h1 id="featuredName">Mario 64</h1>
+            <p id="featuredDescription">Explore Peach’s Castle, hunt for Stars, and revisit a classic 3D platforming adventure in your browser.</p>
+          </div>
+          <a class="full-link" id="fullGameLink" href="game.html?game=mario64">Open full screen <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="shelf" aria-label="Game shelf">
+      <div class="shelf-head">
+        <div>
+          <div class="section-kicker">YOUR SHELF</div>
+          <h2>More games</h2>
+        </div>
+        <span class="shelf-count">03 TITLES</span>
+      </div>
+      <div class="game-grid" id="gameGrid"></div>
+    </section>
 
     <footer class="footer">
-      <span>Runs as a static GitHub Pages site.</span>
-      <span>↗ External game content is embedded in an iframe.</span>
+      <span>J / static browser game shelf</span>
+      <span>External game content is loaded in an iframe.</span>
     </footer>
   </main>
 
